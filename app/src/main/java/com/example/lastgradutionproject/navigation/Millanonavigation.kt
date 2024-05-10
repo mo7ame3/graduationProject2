@@ -4,13 +4,11 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.lastgradutionproject.Item
 import com.example.lastgradutionproject.profile.profile
 import com.example.lastgradutionproject.screans.ClientScreans.Edit.Edit
 import com.example.lastgradutionproject.screans.ClientScreans.Fav.favourite
 import com.example.lastgradutionproject.screans.ClientScreans.History.HistoryScrean
 import com.example.lastgradutionproject.screans.ClientScreans.HomeScrean.Home
-import com.example.lastgradutionproject.screans.ClientScreans.HomeScrean.RowItem
 import com.example.lastgradutionproject.screans.ClientScreans.Login.LoginScrean
 import com.example.lastgradutionproject.screans.ClientScreans.Men.menScrean
 import com.example.lastgradutionproject.screans.ClientScreans.OrderScrean.Order
@@ -23,13 +21,13 @@ import com.example.lastgradutionproject.screans.ClientScreans.onBording.OnBordin
 import com.example.lastgradutionproject.screans.ClientScreans.prossing.prossing
 import com.example.lastgradutionproject.screans.ClientScreans.shoses.shosesScreans
 import com.example.lastgradutionproject.screans.MillanoSplashScrean
+import com.example.lastgradutionproject.screans.mangerScreen.control.ControlScreen
 import com.example.lastgradutionproject.screans.startScrean.StartScrean
-import com.google.firestore.v1.StructuredQuery.Order
 
 @Composable
 fun MillanoNavigation() {
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = MillanoScreans.SplashScrean.name) {
+    NavHost(navController = navController, startDestination = MillanoScreans.ControlScreen.name) {
         composable(MillanoScreans.SplashScrean.name){
             MillanoSplashScrean(navController=navController)
         }
@@ -86,6 +84,9 @@ fun MillanoNavigation() {
         }
         composable(MillanoScreans.reportscrean.name){
             Report(navController=navController)
+        }
+        composable(MillanoScreans.ControlScreen.name){
+            ControlScreen(navController=navController)
         }
 
 

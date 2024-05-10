@@ -24,6 +24,12 @@ enum class MillanoScreans {
     editprofile,
     reportscrean,
 
+
+
+    //manger
+    ControlScreen,
+
+
         //DesignerScreans
         DesignerHomeScrean,
         myDesignsScreans,
@@ -97,6 +103,7 @@ enum class MillanoScreans {
                     reportscrean -> reportscrean.name
                     favouritescrean -> favouritescrean.name
                     SearchScrean -> SearchScrean.name
+                    ControlScreen -> ControlScreen.name
                     null -> "null"
 
 
